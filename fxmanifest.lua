@@ -8,12 +8,12 @@ name         'Warn_System'
 author       '^AI#1022'
 version      '1.0.0'
 license      'LGPL-3.0-or-later'
-repository   'https://github.com/'
+repository   'https://github.com/iamilia/Ai_WarnSystem'
 description  'A Warn System StandLone .'
 
 --[[ Manifest ]]--
 dependencies {
-	'/server:6200',
+	"/server:6200",
     "oxmysql",
 }
 
