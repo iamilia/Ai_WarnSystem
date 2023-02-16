@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    margin: 0;
+    z-index: 10;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+    user-select: none;
+}
+
+main {
+    width: 35.125rem;
+    height: 20.625rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to top, #ffffffcb, #ffffff);
+    border-radius: 0.93rem;
+    animation-name: ShowPanel;
+    animation-duration: 1s;
+    background: aqua;
+    animation: 2s BacklightToHeavy infinite;
+}
+
+p {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+
+#head__main {
+    display: inline-block;
+    width: 35.125rem;
+    height: 2.5rem;
+    background: #5871ff;
+    border-radius: 0.93rem;
+}
+
+#player__name {
+    height: 0;
+    width: 0;
+}
+
+#player__name p {
+    padding: 0;
+    border: 0;
+    margin: 0.687rem 0 0 0.5rem;
+    animation-name: NameChangeColor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size: 1.4vw;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.close__button {
+    display: inline-block;
+    padding: 0 0 0 0;
+    border: 0;
+    margin: -0.3rem 0.46rem 0 0;
+    background: 0;
+    float: right;
+}
+
+.body--main {
+    display: inline-block;
+    width: 100%;
+    height: 18.125rem;
+    overflow-x: hidden;
+}
+
+.reason {
+    margin: 1.5rem 0 0 0.15rem;
+    padding: 0 0 0 0;
+    border: 0;
+}
+
+.Warner--box {
+    border-radius: 15px;
+    padding: 15px;
+    animation-name: GoldBar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.Warner--box p {
+    margin: -0.5rem 0 0 0;
+}
+
+.Warner--box p span {
+    padding-inline: 0.2rem;
+}
+
+.panel-req-box {
+    display: inline-block;
+    width: 186px;
+    height: 250px;
+    border-radius: 19px;
+    background: linear-gradient(to right, #3ec1d8a6, #3ec1d8);
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.body--main::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+#message {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    width: 10%;
+    height: 5%;
+    border-radius: 0.3vw;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #e6e6e6;
+    font-size: 1vw;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+
+@keyframes ShowPanel {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes NameChangeColor {
+    0% {
+        color: black;
+    }
+
+    10% {
+        color : #1e1e1e;
+    }
+
+    20%{
+        color: gray;
+    }
+
+    30%{
+        color: #818181;
+    }
+
+    40%{
+        color: #a2a2a2;
+    }
+
+    50%{
+        color: #ffffff;
+    }
+
+    60%{
+        color: #bbbaba;
+    }
+
+    70%{
+        color: #a2a2a2;
+    }
+
+
+    80%{
+        color: #818181;
+    }
+
+    90%{
+        color: #3a3a3a;
+    }
+
+}
+
+@keyframes BacklightToHeavy {
+    0% {
+        background : #00ffc4;
+    }
+
+    20% {
+        background : #449bf5;
+    }
+
+    40% {
+        background : #38fc9b;
+    }
+
+    100% {
+        background : #67ffb2;
+    }
+}
+
+@keyframes GoldBar {
+    0% {
+        border: crimson solid 2px;
+    }
+
+    25% {
+        border: #ff2148 solid 2px;
+    }
+
+    50% {
+        border: #ff3e5f solid 2px;
+    }
+
+    50% {
+        border: #ff3e9f solid 2px;
+    }
+
+    75% {
+        border: #f23eff solid 2px;
+    }
+
+    100% {
+        border: #b23eff solid 2px;
+    }
+}
