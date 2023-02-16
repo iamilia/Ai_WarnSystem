@@ -18,6 +18,8 @@
 
 # Setup
 <p>you can add the following to your 'server.cfg'</p>
+<br>
+
 ```
 ensure oxmysql
 ensure Ai_WarnSystem
