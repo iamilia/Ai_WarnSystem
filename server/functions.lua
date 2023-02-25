@@ -26,9 +26,13 @@ Functions = {
         return true
     end,
     ---@param player number id of player to check can use
-    ---@return string get license 2 player
+    ---@return string get license player
     GetIdentifier = function(player)
-        return Config.GetIdentifier(player)
+        for i, v in ipairs(GetPlayerIdentifiers(player)) do
+            if string.match(v, "license") then
+                return v
+            end
+        end
     end,
     GetRandomString = function(length)
         math.randomseed(GetGameTimer())

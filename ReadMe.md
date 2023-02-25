@@ -14,7 +14,7 @@
 
 # Dependencies
 <p> for run resource and store data need : </p>
-<a href="https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip" target="_blank">oxmysql</a>
+<a href="https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip" target="_blank" >oxmysql</a>
 
 # Setup
 <p>you can add the following to your 'server.cfg'</p>

@@ -25,8 +25,6 @@ Functions = {
                 event = "hide"
             }))
             SetNuiFocus(display, display)
-        else
-            Functions.ShowUi()
         end
     end
 }

@@ -1,4 +1,12 @@
 local warns = {}
+CreateThread(function()
+    SendNuiMessage(json.encode({
+        event = "setName",
+        name = tostring(GetPlayerName(PlayerId()))
+    }))
+end)
+
+
 RegisterNUICallback('close', function()
     Functions.ClosUi()
 end)
@@ -36,4 +44,4 @@ end)
 
 RegisterCommand("seewarning", function()
     Functions.ShowUi()
-end)
+end, false)
