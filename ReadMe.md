@@ -20,7 +20,22 @@
 <p>you can add the following to your 'server.cfg'</p>
 <br>
 
-```
+```cfg
 ensure oxmysql
 ensure Ai_WarnSystem
 ```
+
+# Commands 
+- Add Warn
+> `/AddWarn id WarnLevel reason`\
+WarnLevel => low - medium - high
+
+- RemoveWarn 
+> `/RemoveWarn id WarnIdentifier` \
+WarnIdentifier : Genrate by server
+
+- seewarning
+> you can see your warning
+
+# Perview
+

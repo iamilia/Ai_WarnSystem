@@ -1,4 +1,3 @@
-'use strict';
 function Show() {
     $("main").fadeIn(500)
 }
