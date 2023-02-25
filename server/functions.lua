@@ -95,14 +95,16 @@ CreatePlayer = function(player)
         if IsHaveData then
             local WarnData = MySQL.prepare.await("SELECT `warns` FROM `players_warning` WHERE identifier = ?" , { self.identifier })
             warn = WarnData.warns
-            for i, v in pairs(warn) do
-                local Warner = Functions.split(v.reason, " from : ")[2] ~= nil and Functions.split(v.reason, " from : ")[2] or "unknown"
-                TriggerClientEvent("WarnSystem:addWarn", self.PlayerID, {
-                    warnIdentifier = i,
-                    WarnLevel = v.WarnLevel,
-                    reason = v.reason,
-                    Warner = Warner
-                })
+            if #warn > 0 then
+                for i, v in pairs(warn) do
+                    local Warner = Functions.split(v.reason, " from : ")[2] ~= nil and Functions.split(v.reason, " from : ")[2] or "unknown"
+                    TriggerClientEvent("WarnSystem:addWarn", self.PlayerID, {
+                        warnIdentifier = i,
+                        WarnLevel = v.WarnLevel,
+                        reason = v.reason,
+                        Warner = Warner
+                    })
+                end
             end
         else
             MySQL.insert.await('INSERT INTO players_warning (identifier, warns) VALUES (?, ?)', { self.identifier , json.encode({})})
